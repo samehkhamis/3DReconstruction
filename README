@@ -1,0 +1,16 @@
+Class Project: 3D reconstruction from two unrectified images
+Date: May 2009
+Based on:
+1. Pollefeys et al. Visual modeling with a hand-held camera. IJCV, 2004
+2. Csurka et al. Characterizing the uncertainty of the fundamental matrix. CVIU, 1997.
+3. Pollefeys et al. A simple and efficient rectification method for general motion. ICCV, 1999.
+4. Oram. Rectification for any epipolar geometry. BMVC, 2001.
+5. Sturm. On focal length calibration from two views. CVPR, 2001.
+6. Zhang and Seitz. Parameter estimation for mrf stereo. CVPR, 2005.
+
+The project is motivated by the pipeline of [1]. I started off my establishing keypoint matching using SIFT and the 8-point algorithm,
+then I estimate the fundamental matrix as in [2] using Levenberg-Marquardt. I can compute the homography as in [3] and rectify the images
+as in [4]. I autocalibrate as in [5] to recover the camera parameters, and then I compute the disparity map using alpha-expansion.
+The alpha-expansion parameters are estimated using the EM approach of [6].
+
+Code is online mainly for my reference. It is licensed under GPLv2 for non-commercial research purposes only.
